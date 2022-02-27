@@ -22,6 +22,7 @@ std::ostream& operator<<(std::ostream& stream,const my_class& mc)
 int main()
 {
     std::vector<my_class> v;
+    v.resize(3);
     v.push_back(my_class(1,2,3));
     v.push_back(my_class(4,5,6));
     v.push_back(my_class(7,8,9));
