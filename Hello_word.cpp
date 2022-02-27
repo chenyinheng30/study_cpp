@@ -4,10 +4,10 @@ struct my_class
 {
     int x,y,z;
     my_class(int x,int y,int z):x(x),y(y),z(z){}
-    my_class(const my_class& mc)
-    {
-        std::cout<<"copy!!!"<<std::endl;
-    }
+    // my_class(const my_class& mc)
+    // {
+    //     std::cout<<"copy!!!"<<std::endl;
+    // }
     ~my_class()
     {
         std::cout<<"destructor"<<std::endl;
@@ -25,5 +25,10 @@ int main()
     v.push_back(my_class(1,2,3));
     v.push_back(my_class(4,5,6));
     v.push_back(my_class(7,8,9));
+
+    for(const my_class& mc:v)
+    {
+        std::cout<<mc<<std::endl;
+    }
     return 0;
 }
