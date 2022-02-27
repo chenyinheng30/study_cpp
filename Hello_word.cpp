@@ -24,19 +24,11 @@ int main()
 {
     std::vector<my_class> v;
     v.reserve(3);//每次申请3个空间
-    v.push_back(my_class(1,2,3));
-    v.push_back(my_class(4,5,6));
-    v.push_back(my_class(7,8,9));
+    v.emplace_back(1,2,3);
+    v.emplace_back(4,5,6);
+    v.emplace_back(7,8,9);
 
-    v.push_back(my_class(10,11,12));
-    v.push_back(my_class(13,14,15));
-    v.push_back(my_class(16,17,18));
-
-    v.push_back(my_class(19,20,21));
-    // for(const my_class& mc:v)
-    // {
-    //     std::cout<<mc<<std::endl;
-    // }
+    v.emplace_back(10,11,12);
     SIMPLE_LOG("return");
     return 0;
 }
