@@ -5,6 +5,7 @@
 int main()
 {
     int init_flag=glfwInit();
-    std::cout<<init_flag<<std::endl;
+    SIMPLE_LOG(init_flag);
+    SIMPLE_LOG(sizeof(intmax_t));
     return 0;
 }
